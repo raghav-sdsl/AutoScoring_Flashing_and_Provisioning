@@ -1,0 +1,23 @@
+{
+  "_comment": "List every firmware build the flasher should offer. Drop the .bin files under firmware/<subfolder>/ and add an entry here. JSON has no // comments — use this _comment string for notes. 'chip' is checked against the connected board. Each entry lists its files with offsets: the three build files (bootloader 0x0, partition-table 0x8000, app 0x10000) OR a single MERGED image at 0x0 (idf.py merge-bin). Bump 'version' when you replace a .bin.",
+  "firmwares": [
+    {
+      "name": "AutoScoring Master",
+      "target": "master",
+      "version": "1.0",
+      "chip": "ESP32-S3",
+      "files": [
+        { "path": "master/AutoscoreMaster.bin", "offset": "0x0" }
+      ]
+    },
+    {
+      "name": "Scoring Node",
+      "target": "node",
+      "version": "1.0",
+      "chip": "ESP32-C3",
+      "files": [
+        { "path": "node/node-merged.bin", "offset": "0x0" }
+      ]
+    }
+  ]
+}
