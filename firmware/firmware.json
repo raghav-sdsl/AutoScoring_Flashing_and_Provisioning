@@ -16,7 +16,7 @@
       "version": "1.0",
       "chip": "ESP32-C3",
       "files": [
-        { "path": "node/node-merged.bin", "offset": "0x0" }
+        { "path": "node/Node-merged.bin", "offset": "0x0" }
       ]
     }
   ]
